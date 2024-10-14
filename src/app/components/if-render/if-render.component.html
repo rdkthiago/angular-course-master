@@ -1,0 +1,13 @@
+<div class="class">
+    <div *ngIf="canShow">
+        Show Anything
+    </div>
+    <h2 *ngIf="name === 'Thiago'; else notaUser">
+        The name is Thiago
+    </h2>
+    <ng-template #notaUser>
+        <div>
+            <h2>Not registered!</h2>
+        </div>
+    </ng-template>
+</div>

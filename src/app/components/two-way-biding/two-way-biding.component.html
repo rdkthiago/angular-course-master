@@ -1,0 +1,15 @@
+<div class="class">
+    <h2>Two Way data biding</h2>
+    <form>
+        <input type="text" [(ngModel)]="name" name="name" placeholder="enter your name"/>
+        
+        <input type="password" [(ngModel)]="password" name="pass" placeholder="enter your password">
+        <input type="submit" value="enter"/>
+    </form>
+    <div *ngIf="name !== ''">
+        <p>Name: {{ name }}</p>
+    </div>
+    <div *ngIf="password.length < 8">
+        <p>Please enter a password with at least 8 characters.</p>
+    </div>
+</div>
